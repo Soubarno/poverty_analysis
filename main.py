@@ -14,8 +14,8 @@ from Tabs import home, data, predict, predict1, visualise
 Tabs = {
     "Home": home,
     "Data Info": data,
-    "Prediction": predict,
-    "Prediction 1": predict1,
+    "Prediction - State": predict,
+    "Prediction - Area": predict1,
     "Visualisation": visualise    
 }
 
@@ -26,7 +26,7 @@ page = st.sidebar.radio("Pages", list(Tabs.keys()))
 
 df, X, y = load_data()
 
-if page in ["Prediction","Prediction 1", "Visualisation"]:
+if page in ["Prediction - State","Prediction - Area", "Visualisation"]:
     Tabs[page].app(df, X, y)
 elif (page == "Data Info"):
     Tabs[page].app(df)

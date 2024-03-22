@@ -9,12 +9,13 @@ st.set_page_config(
 
 from web_functions import load_data
 
-from Tabs import home, data, predict, visualise
+from Tabs import home, data, predict, predict1, visualise
 
 Tabs = {
     "Home": home,
     "Data Info": data,
     "Prediction": predict,
+    "Prediction 1": predict1,
     "Visualisation": visualise    
 }
 
